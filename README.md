@@ -3,6 +3,7 @@
 > Because this project used seleninum to download the scratch file, so it is easier to setup the environment with docker.
 
 ### Usage (Intall Docker First)
+hello world
 
 1. Clone this repo
 2. Run `docker build -t flask-scratch-converter .`

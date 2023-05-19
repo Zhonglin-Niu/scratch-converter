@@ -37,6 +37,11 @@
     animation: img2 1s infinite;
   }
 
+  #load {
+    margin-top: 300px;
+    font-size: 50px;
+  }
+
   @keyframes img1 {
     0% {
       opacity: 1;

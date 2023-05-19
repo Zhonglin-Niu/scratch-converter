@@ -105,7 +105,9 @@ def upload_url():
 
 @app.route('/download/<filename>')
 def download_file(filename):
-    return send_file(os.path.join(app.config['DF'], f"{filename}.zip"), as_attachment=True)
+    # get the original name
+    original_name = filename.rsplit("_")[0] + ".zip"
+    return send_file(os.path.join(app.config['DF'], f"{filename}.zip"), as_attachment=True, download_name=original_name)
 
 
 @app.route('/url/<id>')

@@ -85,7 +85,7 @@ step2_2.find(".next").hide();
 // make sure link is valid
 // should start with https://scratch.mit.edu/projects/
 function validLink(link) {
-  let regex = /^https:\/\/scratch.mit.edu\/projects\/\d+\/.*?$/;
+  let regex = /^https:\/\/scratch.mit.edu\/projects\/.*?/;
   return regex.test(link);
 }
 
@@ -218,6 +218,14 @@ backToStep3.on("click", () => {
   $(".right").hide();
   $(".show-preview").html("Show Preview");
 });
+
+const backToStart = $(".step4 .next");
+backToStart.on("click", () => {
+  step4.hide();
+  step1.show();
+  $(".right").hide();
+  $(".show-preview").html("Show Preview");
+})
 
 // show preview btn
 function showOrClosePreview(btn) {

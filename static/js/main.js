@@ -8,6 +8,20 @@ function goodString(string) {
   return convertedString;
 }
 
+function renderTextBox(data) {
+  const {msg, out, err} = data;
+
+  const outLines = out.split("\n");
+  const errLines = out.split("\n");
+  $(".text-box").append(`<p>${msg}</p>`);
+  for (let i = 0; i < outLines.length; i++) {
+    $(".text-box").append(`<p>${outLines[i]}</p>`);
+  }
+  for (let i = 0; i < errLines.length; i++) {
+    $(".text-box").append(`<p>${errLines[i]}</p>`);
+  }
+}
+
 /////////////////////////////////////////////////////////
 ////////              Global Variables              ////////
 /////////////////////////////////////////////////////////
@@ -26,6 +40,7 @@ const renderEditor = code => {
   const editor = ace.edit("editor");
   editor.setTheme("ace/theme/monokai");
   editor.session.setMode("ace/mode/python");
+  editor.setReadOnly(true);
 };
 
 /////////////////////////////////////////////////////////
@@ -169,6 +184,7 @@ generateBtn.on("click", () => {
         console.log(data);
         if (data.code === 1) {
           key = data.key;
+          renderTextBox(data);
           renderEditor(data.python_code);
           step3.hide();
           step4.show();
@@ -195,6 +211,7 @@ generateBtn.on("click", () => {
         console.log(data);
         if (data.code === 1) {
           key = data.key;
+          renderTextBox(data);
           renderEditor(data.python_code);
           step3.hide();
           step4.show();
@@ -238,6 +255,7 @@ function showOrClosePreview(btn) {
     return;
   }
   btn.html("Close Preview");
+
   // it's flex, so 100% only shows 50%
   right.show().animate({ width: "100%" }, 500);
 }

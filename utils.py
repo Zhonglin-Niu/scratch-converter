@@ -2,6 +2,7 @@ import os
 import subprocess
 import time
 import zipfile
+from threading import Timer
 from string import ascii_lowercase, digits
 from random import choice
 
@@ -27,9 +28,17 @@ def gen_key(prefix=""):
 
 
 def run_command(command):
+    # shell=True will make timer useless
     process = subprocess.Popen(
-        command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    stdout, stderr = process.communicate()
+        command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+    
+    timer = Timer(7, process.kill)
+    try:
+        timer.start()
+        stdout, stderr = process.communicate()
+    finally:
+        timer.cancel()
+    
     stdout = stdout.decode('utf-8')
     stderr = stderr.decode('utf-8')
     return_code = process.returncode

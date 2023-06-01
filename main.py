@@ -67,14 +67,15 @@ def upload_file():
         return jsonify(rsp)
 
     file = request.files['file']
-    logger.debug(request.form['fileName'])
+    
     key = gen_key(request.form['fileName'])
     file.save(os.path.join(app.config['UF'], f"{key}.sb3"))
-
+    logger.debug(f"{request.form['fileName']} saved")
     convert_params = {
         "lang": request.form.get("lang")
     }
     rst = generate_zip(app.config, key, convert_params)
+    logger.debug(rst)
     if not rst[0]:
         rsp['code'] = 0
         rsp['msg'] = "Error in generating file!"

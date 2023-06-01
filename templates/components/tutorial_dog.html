@@ -1,12 +1,15 @@
 <div class="steps tutorial_dog none">
 
-    <div class="btns">
-        <button class="tutorialbtn back" >{{ back }}</button>
-        <button class="tutorialbtn next"> {{ next }}</button>
-    </div>
     <div class="centered-text"><pre>
 
-    <img src="{{prefix}}{{ url_for('static', filename='img/dot.png') }}" id = "ScratchForDot" alt="ScratchForDot" width="1350px" align="center"/>
+<b> Tutorial </b>
+
+
+        This tutorial will help you learn how to convert any scratch project you make into the python programming language.
+    <div class = "btns">    
+    <img src="{{prefix}}{{ url_for('static', filename='img/dot.png') }}" id = "ScratchForDot" alt="ScratchForDot" width="485px" height="402px" align="center"/>
+    <iframe src="https://scratch.mit.edu/projects/860099838/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    </div>
 </pre>
     <p><pre>
         
@@ -20,10 +23,6 @@
 
 
     
-    This tutorial will help you learn how to convert any scratch project you make into the python programming language.
-
-
-    
     This next image is part of this project converted into python.
 
 </p>
@@ -34,18 +33,62 @@
 
     
     
-    Can you find when timer > 10 block is in the python code and the scratch code?
+    Can you find when the dog moves 10 steps in the python code and the scratch code?
 
     
     
     
-    I think you are learning! Can you find when the program starts the forest background appears in the python code?
+    I think you are learning! Here is an easy example of the conversion process!
 
 
-    
-    
-    To run this conversion in the terminal the command is <b>python -m pystage.convert.sb3 'SB3 File' -l en -d 'DIRECTORY'</b>
     </p>
+<div class = "btns"> 
+<img src="{{prefix}}{{ url_for('static', filename='img/dot.png') }}" id = "ScratchForDot" alt="ScratchForDot" width="300px" height="300px" align="center"/> 
+<img src="{{prefix}}{{ url_for('static', filename='img/arrow.png') }}" id = "arrow" alt="arrow" width="300px" height="200px" align="center"/>
+<img src="{{prefix}}{{ url_for('static', filename='img/dotPython.png') }}" id = "PythonForDot" alt="PythonForDot" width="700px" height="300px" align="center"/> 
+</div>
 </pre> 
+
+<div class="centered-text"><pre>
+
+
+To run this conversion in the terminal the command is <b>python -m pystage.convert.sb3 'SB3 File' -l en -d 'DIRECTORY'</b>
+
+
+Step 1 to use PyStage is to make a scratch project 
+
+and save it to your computer. 
+
+
+<img src="{{prefix}}{{ url_for('static', filename='img/saveDot.png') }}" id = "SaveDot" alt="SaveDot" width="1000px" align="center"/> 
+
+
+Or you could copy your project link.
+
+
+<img src="{{prefix}}{{ url_for('static', filename='img/copyLink.png') }}" id = "copyLink" alt="copyLink" width="1000px" align="center"/> 
+
+
+<b>Errors that can happen when generating</b>
+
+<p style = 'color: red;'>Error in generating file!</p>This means that the website could not load the content for your project.
+
+
+<p style = 'color: red;'>Invalid URL or internal error!</p> URL is incorrect or scratch is having server issues while you are generating your project.
+
+
+
+When your project is generated this box will show up explaining what PyStage has not implemented yet.
+<img src="{{prefix}}{{ url_for('static', filename='img/box.png') }}" id = "box" alt="box" width="1050px" align="center"/>
+
+
+Enjoy your converted code!
+
+<button class="tutorialbtn back" >{{ back }}</button>
+</pre>
+
+
+
+</div> 
 </div>       
 </div>

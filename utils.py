@@ -1,6 +1,5 @@
 import os
 import subprocess
-import time
 import zipfile
 from threading import Timer
 from string import ascii_lowercase, digits

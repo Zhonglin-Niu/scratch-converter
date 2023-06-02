@@ -136,6 +136,11 @@
   }
 }
 
+.scratch {
+  left: 0;
+  bottom: 20px;
+}
+
 .steps {
   position: relative;
   min-width: 700px;
@@ -263,16 +268,10 @@ input:focus {
   color: white;
   border: none;
   transition: all 0.2s ease-in-out;
-  margin-left: 550px;
-  bottom: -2600px;
+  top: 0px;
 }
 .left .centered-text {
   text-align: center;
-}
-
-.left .scratch {
-  left: 0;
-  top: 20px;
 }
 .left .text-box {
   width: 70%;

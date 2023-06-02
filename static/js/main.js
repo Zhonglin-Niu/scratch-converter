@@ -84,7 +84,8 @@ const step2_2 = $(".step2.file");
 const step3 = $(".step3");
 const step4 = $(".step4");
 const tutorial = $(".tutorial_dog");
-const logo = $(".header");
+const tutorial_dog_part2 = $(".tutorial_dog_part2");
+const tutorial_dog_part3 = $(".tutorial_dog_part3");
 let jumpThrough = "";
 
 $("#languageOptions").val($("#languageOptions").attr("data-lang"));
@@ -113,7 +114,7 @@ $("#tutorial1").on("click", () => {
   console.log("clicked");
   step1.hide();
   tutorial.show();
-  logo.hide();
+  tutorial_dog_part2.hide();
   
 })
 // pages on tutorial for back and next
@@ -121,8 +122,38 @@ const backToStep1FromTutorial = $(".tutorial_dog .back");
 backToStep1FromTutorial.on("click", () => {
   tutorial.hide();
   step1.show();
+  
 });
 
+const nextToPage2OfTutorial = $(".tutorial_dog .next");
+nextToPage2OfTutorial.on("click", () => {
+  tutorial.hide();
+  tutorial_dog_part2.show();
+});
+
+const backToPage1OfTutorial = $(".tutorial_dog_part2 .back");
+backToPage1OfTutorial.on("click", () => {
+  tutorial_dog_part2.hide();
+  tutorial.show();
+});
+
+const nextToPage3OfTutorial = $(".tutorial_dog_part2 .next");
+nextToPage3OfTutorial.on("click", () => {
+  tutorial_dog_part2.hide();
+  tutorial_dog_part3.show();
+});
+
+const backToPage2OfTutorial = $(".tutorial_dog_part3 .back");
+backToPage2OfTutorial.on("click", () => {
+  tutorial_dog_part3.hide();
+  tutorial_dog_part2.show();
+});
+
+const EndTutorial = $(".tutorial_dog_part3 .next");
+EndTutorial.on("click", () => {
+  tutorial_dog_part3.hide();
+  step1.show();
+});
 
 /////////////////////////////////////////////////////////
 ////////                  Step2                   ////////

@@ -115,8 +115,7 @@ $("#tutorial1").on("click", () => {
   step1.hide();
   tutorial.show();
   tutorial_dog_part2.hide();
-  
-})
+});
 // pages on tutorial for back and next
 const backToStep1FromTutorial = $(".tutorial_dog .back");
 backToStep1FromTutorial.on("click", () => {
@@ -276,6 +275,7 @@ $(".step3 .generate").on("click", () => {
 
   const error = (err) => {
     $(".bg").hide();
+    $(".msg").html("Unknown error");
     console.log(err);
   };
 

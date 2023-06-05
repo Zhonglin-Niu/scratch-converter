@@ -1,8 +1,8 @@
 import os
-import logging
+from logger import *
 import json
-from utils import gen_key, init_folder, generate_zip, delete_files, get_code_from_key
 from flask import Flask, request, render_template, send_file, jsonify
+from utils import gen_key, init_folder, generate_zip, get_code_from_key
 from downloader import ScratchDownloader
 
 app = Flask(__name__)
@@ -10,18 +10,9 @@ app.secret_key = '3jfjdja5fgj5n32j4j3'
 app.config['UF'] = 'scratch_files'
 app.config['DF'] = 'generated_files'
 
-# DEBUG, INFO, WARNING, ERROR, CRITICAL
-logging.basicConfig(level=logging.DEBUG)
-logger = logging.getLogger("my")
-
-# get flask built-in logger
-werkzeug_logger = logging.getLogger('werkzeug')
-# only log higher than warning level
-werkzeug_logger.setLevel(logging.WARNING)
-
 
 def get_version():
-    with open("version", "r") as f:
+    with open("version", "r", encoding="utf-8") as f:
         return f"0.0.{f.read()}"
 
 
@@ -31,9 +22,9 @@ def get_translation():
     if lang not in available_langs:
         lang = request.accept_languages.best_match(available_langs)
         lang = lang if lang else "en"
-    with open(f"static/langs/{lang}.json", 'r') as f:
+    with open(f"static/langs/{lang}.json", 'r', encoding="utf-8") as f:
         translation = json.load(f)
-        
+
     return translation, lang
 
 
@@ -51,12 +42,30 @@ def gen_rsp():
     }
 
 
+def gen_zip_and_get_rsp(rsp, key):
+    convert_params = {
+        "lang": request.form.get("lang")
+    }
+    ok, output = generate_zip(app.config, key, convert_params)
+    if not ok:
+        rsp['code'] = 0
+        rsp['msg'] = get_trans_from("error_in_generating")
+        rsp['err'] = output
+        return jsonify(rsp)
+    rsp['msg'] = get_trans_from("success_in_generating")
+    rsp['out'] = output
+    rsp['key'] = key
+    rsp['python_code'] = get_code_from_key(app.config, key)
+
+    return rsp
+
+
 @app.route('/')
 def index():
     version = get_version()
     translation, lang = get_translation()
-    
-    if request.url.count("pystage") > 0:
+
+    if request.headers.get("X-Forwarded-Host", "").count("calvin") > 0:
         prefix = "/pystage"
     else:
         prefix = ""
@@ -84,22 +93,8 @@ def upload_file():
     
     key = gen_key(request.form['fileName'])
     file.save(os.path.join(app.config['UF'], f"{key}.sb3"))
-    logger.debug(f"{request.form['fileName']} saved")
-    convert_params = {
-        "lang": request.form.get("lang")
-    }
-    rst = generate_zip(app.config, key, convert_params)
-    logger.debug(rst)
-    if not rst[0]:
-        rsp['code'] = 0
-        rsp['msg'] = get_trans_from("error_in_generating")
-        rsp['out'] = rst[1]
-        rsp['err'] = rst[2]
-        return jsonify(rsp)
-    rsp['msg'] = get_trans_from("success_in_generating")
-    rsp['out'] = rst[1]
-    rsp['key'] = key
-    rsp['python_code'] = get_code_from_key(app.config, key)
+
+    rsp = gen_zip_and_get_rsp(rsp, key)
     return jsonify(rsp)
 
 
@@ -122,21 +117,7 @@ def upload_url():
         rsp['msg'] = "Invalid URL or internal error!"
         return jsonify(rsp)
 
-    convert_params = {
-        "lang": request.get_json().get("lang")
-    }
-    rst = generate_zip(app.config, key, convert_params)
-    if not rst[0]:
-        rsp['code'] = 0
-        rsp['msg'] = get_trans_from("error_in_generating")
-        rsp['out'] = rst[1]
-        rsp['err'] = rst[2]
-        return jsonify(rsp)
-
-    rsp['msg'] = get_trans_from("success_in_generating")
-    rsp['out'] = rst[1]
-    rsp['key'] = key
-    rsp['python_code'] = get_code_from_key(app.config, key)
+    rsp = gen_zip_and_get_rsp(rsp, key)
     return jsonify(rsp)
 
 
@@ -145,10 +126,13 @@ def download_file(filename):
     # get the original name
     original_name = filename.rsplit("_", 1)[0] + ".zip"
     logger.debug(f"{filename}, {original_name}")
-    return send_file(os.path.join(app.config['DF'], f"{filename}.zip"), as_attachment=True, download_name=original_name)
+
+    path = os.path.join(app.config['DF'], f"{filename}.zip")
+    if not os.path.exists(path):
+        return "Generated file should be download within 10 minutes, otherwise it will be deleted."
+    return send_file(path, as_attachment=True, download_name=original_name)
 
 
 if __name__ == "__main__":
     init_folder(app.config)
-    delete_files(app.config)
     app.run(debug=True, port=5000, host='0.0.0.0')

@@ -31,7 +31,7 @@
   "tutorial" : "单击图像以开始教程。",
   "error_in_generating": "生成文件失败！",
   "success_in_generating": "文件生成成功！",
-  "beginner": "初学者",
-  "mediocre": "平庸",
-  "master": "掌握"
+  "beginner": "初级",
+  "mediocre": "中级",
+  "master": "高级"
 }

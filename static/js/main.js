@@ -84,6 +84,7 @@ const step2_2 = $(".step2.file");
 const step3 = $(".step3");
 const step4 = $(".step4");
 const tutorial_easy = $(".tutorial_dog");
+const tutorial_dog_code = $(".tutorial_dog_code");
 const tutorial_dog_part2 = $(".tutorial_dog_part2");
 const tutorial_dog_part3 = $(".tutorial_dog_part3");
 const tutorial_medium = $(".tutorial_cat");
@@ -125,6 +126,19 @@ $("#tutorial1").on("click", () => {
   step1.hide();
   tutorial_easy.show();
   tutorial_dog_part2.hide();
+});
+
+$("#ScratchCodeForDot").on("click", () => {
+  console.log("clicked");
+  tutorial_easy.hide();
+  tutorial_dog_code.show();
+});
+// back button for how to make scratch project
+const back = $(".tutorial_dog_code .back");
+back.on("click", () => {
+  tutorial_dog_code.hide();
+  tutorial_easy.show();
+  
 });
 // pages on tutorial for back and next
 const backToStep1FromTutorial = $(".tutorial_dog .back");

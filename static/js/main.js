@@ -87,8 +87,10 @@ const tutorial_easy = $(".tutorial_dog");
 const tutorial_dog_part2 = $(".tutorial_dog_part2");
 const tutorial_dog_part3 = $(".tutorial_dog_part3");
 const tutorial_medium = $(".tutorial_cat");
-const tutorial_cat_part2 = $(".tutorial_cat_part2")
+const tutorial_cat_part2 = $(".tutorial_cat_part2");
 const tutorial_hard = $(".tutorial_squirrel");
+const tutorial_squirrel_part2 = $(".tutorial_squirrel_part2");
+const tutorial_squirrel_part3 = $(".tutorial_squirrel_part3")
 let jumpThrough = "";
 
 $("#languageOptions").val($("#languageOptions").attr("data-lang"));
@@ -210,6 +212,34 @@ const backToStep1FromSquirrelTutorial = $(".tutorial_squirrel .back");
 backToStep1FromSquirrelTutorial.on("click", () => {
   tutorial_hard.hide();
   step1.show();
+  
+});
+
+const nextToPart2ToSquirrelTutorial = $(".tutorial_squirrel .next");
+nextToPart2ToSquirrelTutorial.on("click", () => {
+  tutorial_hard.hide();
+  tutorial_squirrel_part2.show();
+  
+});
+
+const backToPart1OfSquirrelTutorial = $(".tutorial_squirrel_part2 .back");
+backToPart1OfSquirrelTutorial.on("click", () => {
+  tutorial_squirrel_part2.hide();
+  tutorial_hard.show();
+  
+});
+
+const nextToPart3OfSquirrelTutorial = $(".tutorial_squirrel_part2 .next");
+nextToPart3OfSquirrelTutorial.on("click", () => {
+  tutorial_squirrel_part2.hide();
+  tutorial_squirrel_part3.show();
+  
+});
+
+const backToPart2OfSquirrelTutorial = $(".tutorial_squirrel_part3 .back");
+backToPart2OfSquirrelTutorial.on("click", () => {
+  tutorial_squirrel_part3.hide();
+  tutorial_squirrel_part2.show();
   
 });
 

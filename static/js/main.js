@@ -90,7 +90,7 @@ const tutorial_medium = $(".tutorial_cat");
 const tutorial_cat_part2 = $(".tutorial_cat_part2");
 const tutorial_hard = $(".tutorial_squirrel");
 const tutorial_squirrel_part2 = $(".tutorial_squirrel_part2");
-const tutorial_squirrel_part3 = $(".tutorial_squirrel_part3")
+const tutorial_squirrel_part3 = $(".tutorial_squirrel_part3");
 let jumpThrough = "";
 
 $("#languageOptions").val($("#languageOptions").attr("data-lang"));

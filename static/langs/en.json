@@ -55,7 +55,7 @@
   "easyTutorialSentence15": "Self represents the instance of a class and in this case it represents our Dog named Dot at its current state.",
   "easyTutorialSentence16": "Self is then used to move the dog 10 steps and make him bark.",
   "easyTutorialSentence17": "defines a function that starts when the green flag is clicked so the code can run.",
-  "easyTutorialSentence18": "The PyStage enviroment for every project is created in the code below",
+  "easyTutorialSentence18": "The code below sets up the stage and sprite for your Scratch project",
   "easyTutorialSentence19": "This makes our program include sounds, images, variables, costumes and a stage.",
   "easyTutorialSentence20": "Can you find the line of code where pystage imports the stage and sprite?",
   "easyTutorialSentence21": "What is the number for center_y in 'dot_c'?",
@@ -205,8 +205,20 @@
   "hardTutorialSentence78": "You can also draw on your sprite to make your character anything you want it to be.",
   "hardTutorialSentence79": "Click costumes in the scratch editor and click fill to choose your color!",
   "hardTutorialSentence80": "You can draw, create a line, circle, square, add text, fill an area with color, erase and select your sprite.",
-  "hardTutorialSentence81": "Now your sprite will look like what you have drawn in game."
-
+  "hardTutorialSentence81": "Now your sprite will look like what you have drawn in game.",
+  "TutorialSentence1": "How to make a basic scratch project.",
+  "TutorialSentence2": "1. File -> New.",
+  "TutorialSentence3": "2. Click choose a sprite in the bottom right corner.",
+  "TutorialSentence4": "3. search for dot in the search bar and click on dot the dog.",
+  "TutorialSentence5": "4. Next delete the cat by clicking on the trash can on the sprite.",
+  "TutorialSentence6": "5. Click on Events.",
+  "TutorialSentence7": "6. Drag When green flag clicked over to the script area.",
+  "TutorialSentence8": "7. Click on Motion.",
+  "TutorialSentence9": "8. Drag move 10 steps over to the script area.",
+  "TutorialSentence10": "9. Click on Sounds.",
+  "TutorialSentence11": "10. Drag start sound bark over to the script area.",
+  "TutorialSentence12": "11. Make sure all 3 steps are connected to each other in this exact order",
+  "TutorialSentence13": "12. Press the green flag to run your project."
 
 
 }

@@ -304,11 +304,9 @@ $("#codeSample2").on("click", () => {
 });
 
 $("#go").on("click", (e) => {
-  const {offsetX, offsetY} = e;
-  if (((70 < offsetX) && (offsetX < 310)) && ((290 < offsetY) && (offsetY < 420))) {
     alert("correct! This line of python code is broadcasting go!");
-  }
-})
+
+});
 
 const nextToPart5OfSquirrelTutorial = $(".tutorial_squirrel_part4 .next");
 nextToPart5OfSquirrelTutorial.on("click", () => {

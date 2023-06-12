@@ -55,7 +55,7 @@
   "easyTutorialSentence15": "Self 代表一个类的实例，在这种情况下，它代表当前状态下名为 Dot 的 Dog。",
   "easyTutorialSentence16": "然后使用 Self 将狗移动 10 步并让他吠叫。",
   "easyTutorialSentence17": "定义一个函数，该函数在单击绿色标志时启动，以便代码可以运行。",
-  "easyTutorialSentence18": "每个项目的 PyStage 环境都是在下面的代码中创建的",
+  "easyTutorialSentence18": "The code below sets up the stage and sprite for your Scratch project",
   "easyTutorialSentence19": "这使得我们的程序包括声音、图像、变量、服装和舞台。",
   "easyTutorialSentence20": "你能找到 pystage 导入舞台和精灵的代码行吗？",
   "easyTutorialSentence21": "'dot_c' 中 center_y 的数字是多少？",
@@ -205,5 +205,19 @@
   "hardTutorialSentence78": "You can also draw on your sprite to make your character anything you want it to be.",
   "hardTutorialSentence79": "Click costumes in the scratch editor and click fill to choose your color!",
   "hardTutorialSentence80": "You can draw, create a line, circle, square, add text, fill an area with color, erase and select your sprite.",
-  "hardTutorialSentence81": "Now your sprite will look like what you have drawn in game."
+  "hardTutorialSentence81": "Now your sprite will look like what you have drawn in game.",
+  "TutorialSentence1": "How to make a basic scratch project.",
+  "TutorialSentence2": "1. File -> New.",
+  "TutorialSentence3": "2. Click choose a sprite in the bottom right corner.",
+  "TutorialSentence4": "3. search for dot in the search bar and click on dot the dog.",
+  "TutorialSentence5": "4. Next delete the cat by clicking on the trash can on the sprite.",
+  "TutorialSentence6": "5. Click on Events.",
+  "TutorialSentence7": "6. Drag When green flag clicked over to the script area.",
+  "TutorialSentence8": "7. Click on Motion.",
+  "TutorialSentence9": "8. Drag move 10 steps over to the script area.",
+  "TutorialSentence10": "9. Click on Sounds.",
+  "TutorialSentence11": "10. Drag start sound bark over to the script area.",
+  "TutorialSentence12": "11. Make sure all 3 steps are connected to each other in this exact order",
+  "TutorialSentence13": "12. Press the green flag to run your project."
+
 }

@@ -55,7 +55,7 @@
   "easyTutorialSentence15": "Self repräsentiert die Instanz einer Klasse und in diesem Fall unseren Hund namens Dot in seinem aktuellen Zustand.",
   "easyTutorialSentence16": "Dann wird „Selbst“ verwendet, um den Hund 10 Schritte zu bewegen und ihn zum Bellen zu bringen.",
   "easyTutorialSentence17": "definiert eine Funktion, die startet, wenn auf die grüne Flagge geklickt wird, damit der Code ausgeführt werden kann.",
-  "easyTutorialSentence18": "Die PyStage-Umgebung für jedes Projekt wird im folgenden Code erstellt",
+  "easyTutorialSentence18": "Der folgende Code richtet die Bühne und das Sprite für Ihr Scratch-Projekt ein",
   "easyTutorialSentence19": "Deshalb umfasst unser Programm Töne, Bilder, Variablen, Kostüme und eine Bühne.",
   "easyTutorialSentence20": "Können Sie die Codezeile finden, in die Pystage die Bühne und das Sprite importiert?",
   "easyTutorialSentence21": "Wie lautet die Zahl für center_y in „dot_c“?",
@@ -205,7 +205,20 @@
   "hardTutorialSentence78": "Sie können auch auf Ihr Sprite zurückgreifen, um Ihren Charakter so zu gestalten, wie Sie es möchten.",
   "hardTutorialSentence79": "Klicken Sie im Scratch-Editor auf „Kostüme“ und dann auf „Ausfüllen“, um Ihre Farbe auszuwählen!",
   "hardTutorialSentence80": "Sie können zeichnen, eine Linie, einen Kreis oder ein Quadrat erstellen, Text hinzufügen, einen Bereich mit Farbe füllen, löschen und Ihr Sprite auswählen.",
-  "hardTutorialSentence81": "Jetzt sieht Ihr Sprite so aus, wie Sie es im Spiel gezeichnet haben."
+  "hardTutorialSentence81": "Jetzt sieht Ihr Sprite so aus, wie Sie es im Spiel gezeichnet haben.",
+  "TutorialSentence1": "So erstellen Sie ein einfaches Scratch-Projekt.",
+  "TutorialSentence2": "1. Datei -> Neu.",
+  "TutorialSentence3": "2. Klicken Sie unten rechts auf „Sprite auswählen“.",
+  "TutorialSentence4": "3. Suchen Sie in der Suchleiste nach „dot“ und klicken Sie auf „dot the dog“.",
+  "TutorialSentence5": "4. Als nächstes löschen Sie die Katze, indem Sie auf den Mülleimer auf dem Sprite klicken",
+  "TutorialSentence6": "5. Klicken Sie auf Ereignisse.",
+  "TutorialSentence7": "6. Ziehen Sie „Wenn die grüne Flagge angeklickt wird“ in den Skriptbereich.",
+  "TutorialSentence8": "7. Klicken Sie auf Bewegung.",
+  "TutorialSentence9": "8. Ziehen Sie 10 Schritte in den Skriptbereich.",
+  "TutorialSentence10": "9. Klicken Sie auf Töne.",
+  "TutorialSentence11": "10. Ziehen Sie Start Sound Bark in den Skriptbereich.",
+  "TutorialSentence12": "11. Stellen Sie sicher, dass alle 3 Schritte in genau dieser Reihenfolge miteinander verbunden sind",
+  "TutorialSentence13": "12. Drücken Sie die grüne Flagge, um Ihr Projekt auszuführen."
 
 
 }

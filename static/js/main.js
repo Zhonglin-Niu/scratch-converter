@@ -91,13 +91,11 @@ const tutorial_dog_part3 = $(".tutorial_dog_part3");
 const tutorial_medium = $(".tutorial_cat");
 const tutorial_cat_part2 = $(".tutorial_cat_part2");
 const tutorial_cat_part3 = $(".tutorial_cat_part3");
-const tutorial_cat_part4 = $(".tutorial_cat_part4");
 const tutorial_hard = $(".tutorial_squirrel");
 const tutorial_squirrel_part2 = $(".tutorial_squirrel_part2");
 const tutorial_squirrel_part3 = $(".tutorial_squirrel_part3");
 const tutorial_squirrel_part4 = $(".tutorial_squirrel_part4");
 const tutorial_squirrel_part5 = $(".tutorial_squirrel_part5");
-const tutorial_squirrel_part6 = $(".tutorial_squirrel_part6");
 let jumpThrough = "";
 
 $("#languageOptions").val($("#languageOptions").attr("data-lang"));
@@ -232,23 +230,10 @@ backToPart2InCatTutorial.on("click", () => {
   
 });
 
-const nextToPart4InCatTutorial = $(".tutorial_cat_part3 .next");
-nextToPart4InCatTutorial.on("click", () => {
-  tutorial_cat_part3.hide();
-  tutorial_cat_part4.show();
-  
-});
 
-const backToPart3InCatTutorial = $(".tutorial_cat_part4 .back");
-backToPart3InCatTutorial.on("click", () => {
-  tutorial_cat_part4.hide();
-  tutorial_cat_part3.show();
-  
-});
-
-const endTutorial2 = $(".tutorial_cat_part4 .next");
+const endTutorial2 = $(".tutorial_cat_part3 .next");
 endTutorial2.on("click", () => {
-  tutorial_cat_part4.hide();
+  tutorial_cat_part3.hide();
   step1.show();
   
 });
@@ -339,23 +324,11 @@ backToPart4OfSquirrelTutorial.on("click", () => {
   
 });
 
-const nextToPart6OfSquirrelTutorial = $(".tutorial_squirrel_part5 .next");
-nextToPart6OfSquirrelTutorial.on("click", () => {
-  tutorial_squirrel_part5.hide();
-  tutorial_squirrel_part6.show();
-  
-});
 
-const backToPart5OfSquirrelTutorial = $(".tutorial_squirrel_part6 .back");
-backToPart5OfSquirrelTutorial.on("click", () => {
-  tutorial_squirrel_part6.hide();
-  tutorial_squirrel_part5.show();
-  
-});
 
-const EndTutorial3 = $(".tutorial_squirrel_part6 .next");
+const EndTutorial3 = $(".tutorial_squirrel_part5 .next");
 EndTutorial3.on("click", () => {
-  tutorial_squirrel_part6.hide();
+  tutorial_squirrel_part5.hide();
   step1.show();
 });
 

@@ -299,12 +299,12 @@ backToPart3OfSquirrelTutorial.on("click", () => {
 });
 
 $("#codeSample2").on("click", () => {
-  alert("correct! This line of python code starts when green flag is clicked.");
+  alert("English: correct! This line of python code starts when green flag is clicked.\nGerman: richtig! Diese Python-Codezeile beginnt, wenn auf die grüne Flagge geklickt wird.\nChinese 正确的！这行 python 代码在单击绿色标志时启动。");
   
 });
 
 $("#go").on("click", (e) => {
-    alert("correct! This line of python code is broadcasting go!");
+    alert("English: correct! This line of python code is broadcasting go!\nGerman: richtig! Diese Python-Codezeile sendet „Go!“\nChinese: 正确的！这行python代码是广播go！");
 
 });
 

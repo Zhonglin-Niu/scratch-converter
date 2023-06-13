@@ -258,7 +258,7 @@ $(document).ready(function() {
   });
 });
 
-//image turns red if wrong
+//image hides if wrong
 $(document).ready(function() {
   var image = $('#catCode4');
   image.click(function() {
@@ -335,19 +335,49 @@ backToPart3OfSquirrelTutorial.on("click", () => {
   
 });
 
-$("#codeSample2").on("click", () => {
-  alert("English: correct! This line of python code starts when green flag is clicked.\nGerman: richtig! Diese Python-Codezeile beginnt, wenn auf die grüne Flagge geklickt wird.\nChinese 正确的！这行 python 代码在单击绿色标志时启动。");
-  
-});
-
-$("#go").on("click", (e) => {
+// hiding and showing images on page 4
+$(document).ready(function() {
+  var Badimage = $('#dot');
+  var correctImage = $('#go');
+  Badimage.click(function() {
+    Badimage.hide();
+    correctImage.hide();
+    alert("English: Wrong! German: falsch! Chinese: 错误的！");
+  });
+  correctImage.click(function() {
+    Badimage.hide();
     alert("English: correct! This line of python code is broadcasting go!\nGerman: richtig! Diese Python-Codezeile sendet „Go!“\nChinese: 正确的！这行python代码是广播go！");
-
+  });
 });
 
-$("#scratchExample1").on("click", (e) => {
-  alert("English: correct! x goes to x2 and y goes to y2!\nGerman: richtig! x geht zu x2 und y geht zu y2!“\nChinese: 正确的！ x 转到 x2，y 转到 y2！ ");
+$(document).ready(function() {
+  var Badimage = $('#someCode');
+  var correctImage = $('#codeSample2');
+  Badimage.click(function() {
+    Badimage.hide();
+    correctImage.hide();
+    alert("English: Wrong! German: falsch! Chinese: 错误的！");
+  });
+  correctImage.click(function() {
+    Badimage.hide();
+    alert("English: correct! This line of python code is broadcasting go!\nGerman: richtig! Diese Python-Codezeile sendet „Go!“\nChinese: 正确的！这行python代码是广播go！");
+    alert("English: correct! This line of python code starts when green flag is clicked.\nGerman: richtig! Diese Python-Codezeile beginnt, wenn auf die grüne Flagge geklickt wird.\nChinese 正确的！这行 python 代码在单击绿色标志时启动。");
+  });
+});
 
+$(document).ready(function() {
+  var Badimage = $('#scratchExample2');
+  var correctImage = $('#scratchExample1');
+  Badimage.click(function() {
+    Badimage.hide();
+    correctImage.hide();
+    alert("English: Wrong! German: falsch! Chinese: 错误的！");
+  });
+  correctImage.click(function() {
+    Badimage.hide();
+    
+    alert("English: correct! x goes to x2 and y goes to y2!\nGerman: richtig! x geht zu x2 und y geht zu y2!“\nChinese: 正确的！ x 转到 x2，y 转到 y2！ ");
+  });
 });
 
 const nextToPart5OfSquirrelTutorial = $(".tutorial_squirrel_part4 .next");

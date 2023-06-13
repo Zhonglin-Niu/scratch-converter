@@ -238,6 +238,43 @@ endTutorial2.on("click", () => {
   
 });
 
+// image turns green if correct
+$(document).ready(function() {
+  // Get the image element
+  var image = $('#pythonCodesample6');
+  // Add a click event handler to the image
+  image.click(function() {
+      // Set the image's filter property to change the color to greenish
+      image.css('filter', 'hue-rotate(90deg)');
+      alert("English: Correct! German: richtig! Chinese: 正确的!");
+  });
+});
+
+$(document).ready(function() {
+  var image = $('#catCode5');
+  image.click(function() {
+      image.css('filter', 'hue-rotate(90deg)');
+      alert("English: Correct! German: richtig! Chinese: 正确的!");
+  });
+});
+
+//image turns red if wrong
+$(document).ready(function() {
+  var image = $('#catCode4');
+  image.click(function() {
+      image.hide();
+      alert("English: Wrong! German: richtig! Chinese: 正确的!");
+  });
+});
+
+$(document).ready(function() {
+  var image = $('#catCode6');
+  image.click(function() {
+    image.hide();
+    alert("English: Wrong! German: richtig! Chinese: 正确的!");
+  });
+});
+
 /////////////////////////////////////////////////////////
 ////////              Master tutorial            ////////
 /////////////////////////////////////////////////////////
@@ -305,6 +342,11 @@ $("#codeSample2").on("click", () => {
 
 $("#go").on("click", (e) => {
     alert("English: correct! This line of python code is broadcasting go!\nGerman: richtig! Diese Python-Codezeile sendet „Go!“\nChinese: 正确的！这行python代码是广播go！");
+
+});
+
+$("#scratchExample1").on("click", (e) => {
+  alert("English: correct! x goes to x2 and y goes to y2!\nGerman: richtig! x geht zu x2 und y geht zu y2!“\nChinese: 正确的！ x 转到 x2，y 转到 y2！ ");
 
 });
 

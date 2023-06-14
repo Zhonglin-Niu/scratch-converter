@@ -220,6 +220,7 @@
   "TutorialSentence10": "9. Click on Sounds.",
   "TutorialSentence11": "10. Drag start sound bark over to the script area.",
   "TutorialSentence12": "11. Make sure all 3 steps are connected to each other in this exact order",
-  "TutorialSentence13": "12. Press the green flag to run your project."
+  "TutorialSentence13": "12. Press the green flag to run your project.",
+  "projectUrl": "Project Url:"
 
 }

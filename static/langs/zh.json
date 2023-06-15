@@ -125,6 +125,8 @@
   "mediumTutorialSentence26": "When you press the green flag the x and y cordinates are reset to their original position.",
   "mediumTutorialSentence27": "This is our project converted into Python.",
   "mediumTutorialSentence28": "Can you find the Python function the matches with the Scratch blocks? Try and click on the code above to guess.",
+  "mediumTutorialSentence29": "The code that was missing from the beginning of the tutorial was when the d key is pressed and you are touching Cheesy Puffs ",
+  "mediumTutorialSentence30": "your score Changes by 1",
   "hardTutorialSentence1": "This tutorial will teach you how to use clones and messages in a Scratch game.",
   "hardTutorialSentence2": "Rules:",
   "hardTutorialSentence3": "Eat more than 100 donuts in 30 seconds to win! ",

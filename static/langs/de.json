@@ -28,15 +28,15 @@
   "success_info": "Datei erfolgreich generiert!",
   "thanks_info": "Viel Spaß mit Ihrem konvertierten Scratch-Code!",
   "select_file": "Datei aussuchen",
-  "tutorial" : "Klicken Sie auf ein Bild, um das Tutorial zu starten.",
+  "tutorial": "Klicken Sie auf ein Bild, um das Tutorial zu starten.",
   "error_in_generating": "Fehler beim Generieren der Datei!",
   "success_in_generating": "Datei erfolgreich generiert!",
   "beginner": "Anfänger",
-  "mediocre": "mittelmäßig",
+  "mediocre": "mäßig",
   "master": "Meister",
   "WebDevelopers": "Web-Entwickler",
   "beginnerTutorial": "Anfänger-Tutorial",
-  "mediocreTutorial": "Mittelmäßiges Tutorial",
+  "mediocreTutorial": "mäßig Tutorial",
   "masterTutorial": "Master-Tutorial",
   "easyTutorialSentence1": "In diesem Tutorial lernen Sie, wie Sie jedes von Ihnen erstellte Scratch-Projekt in die Programmiersprache Python konvertieren.",
   "easyTutorialSentence2": "Dieses Bild unten zeigt Dot den Hund in seinem natürlichen Lebensraum, der ... SCRATCH!",
@@ -64,7 +64,7 @@
   "easyTutorialSentence24": "Ich glaube, du lernst!",
   "easyTutorialSentence25": "Um PyStage verwenden zu können, müssen Sie zunächst ein Scratch-Projekt erstellen",
   "easyTutorialSentence26": "und speichern Sie es auf Ihrem Computer oder kopieren Sie Ihren Projektlink.",
-  "easyVideoSentence" : "Hier ist ein Link zu einem Video für Anfänger, die PyStage lernen!",
+  "easyVideoSentence": "Hier ist ein Link zu einem Video für Anfänger, die PyStage lernen!",
   "easyTutorialSentence27": "Fehler, die beim Generieren auftreten können",
   "easyTutorialSentence28": "Fehler beim Generieren der Datei!",
   "easyTutorialSentence29": "Das bedeutet, dass die Website den Inhalt für Ihr Projekt nicht laden konnte.",
@@ -203,7 +203,7 @@
   "hardTutorialSentence75": "Wenn Squirrel2 Donuts größer als 99 ist, sagen Sie eine Nachricht.",
   "hardTutorialSentence76": "Sehen wir uns nun an, ob Sie den Scratch-Code mit dem Python-Code in Einklang bringen können!",
   "hardTutorialSentence77": "Mit welchem ​​Scratch-Codeblock stimmt diese Pyhton-Codezeile überein?",
-  "green" : "Klicken Sie zur Auswahl auf den Scratch-Code.",
+  "green": "Klicken Sie zur Auswahl auf den Scratch-Code.",
   "hardTutorialSentence78": "Sie können auch auf Ihr Sprite zurückgreifen, um Ihren Charakter so zu gestalten, wie Sie es möchten.",
   "hardTutorialSentence79": "Klicken Sie im Scratch-Editor auf „Kostüme“ und dann auf „Ausfüllen“, um Ihre Farbe auszuwählen!",
   "hardTutorialSentence80": "Sie können zeichnen, eine Linie, einen Kreis oder ein Quadrat erstellen, Text hinzufügen, einen Bereich mit Farbe füllen, löschen und Ihr Sprite auswählen.",
@@ -222,6 +222,4 @@
   "TutorialSentence12": "11. Stellen Sie sicher, dass alle 3 Schritte in genau dieser Reihenfolge miteinander verbunden sind",
   "TutorialSentence13": "12. Drücken Sie die grüne Flagge, um Ihr Projekt auszuführen.",
   "projectUrl": "Projekt-URL:"
-
-
 }

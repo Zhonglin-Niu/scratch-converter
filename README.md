@@ -8,3 +8,8 @@
 2. Run `docker build -t flask-scratch-converter .`
 3. Run `docker run -p 5000:5000 flask-scratch-converter`
 4. Open `http://localhost:5000` in your browser
+
+
+![demo](./imgs/demo.png)
+![generate](./imgs/generate.png)
+

@@ -92,7 +92,7 @@ class ScratchDownloader:
             saveBtn.click()
 
             titleSpan = driver.find_element(
-                By.XPATH, '//*[@id="app"]/div/div[2]/div[1]/div[5]/div/span')
+                By.XPATH, '//*[@id="app"]/div/div[2]/div[1]/div[2]/div/span')
             self.file_name = titleSpan.text
 
             return self.__download_status()
